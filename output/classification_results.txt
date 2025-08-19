@@ -1,0 +1,90 @@
+
+=== Model: LogisticRegression ===
+Cross-validation scores: [0.265 0.245 0.24  0.245 0.23 ]
+Mean accuracy: 0.2450
+              precision    recall  f1-score   support
+
+       Books       0.25      0.33      0.29       108
+    Clothing       0.35      0.09      0.14        91
+ Electronics       0.24      0.20      0.22       102
+  Home Decor       0.31      0.47      0.38        99
+
+    accuracy                           0.28       400
+   macro avg       0.29      0.27      0.25       400
+weighted avg       0.29      0.28      0.26       400
+
+
+=== Model: DecisionTree ===
+Cross-validation scores: [1.    1.    1.    0.995 1.   ]
+Mean accuracy: 0.9990
+              precision    recall  f1-score   support
+
+       Books       0.96      1.00      0.98       108
+    Clothing       1.00      0.93      0.97        91
+ Electronics       0.99      1.00      1.00       102
+  Home Decor       1.00      1.00      1.00        99
+
+    accuracy                           0.98       400
+   macro avg       0.99      0.98      0.98       400
+weighted avg       0.99      0.98      0.98       400
+
+
+=== Model: RandomForest ===
+Cross-validation scores: [0.955 0.94  0.935 0.965 0.94 ]
+Mean accuracy: 0.9470
+              precision    recall  f1-score   support
+
+       Books       0.85      0.95      0.90       108
+    Clothing       0.93      0.81      0.87        91
+ Electronics       0.92      0.88      0.90       102
+  Home Decor       0.87      0.89      0.88        99
+
+    accuracy                           0.89       400
+   macro avg       0.89      0.88      0.89       400
+weighted avg       0.89      0.89      0.89       400
+
+
+=== Model: GradientBoosting ===
+Cross-validation scores: [1.    1.    0.995 1.    1.   ]
+Mean accuracy: 0.9990
+              precision    recall  f1-score   support
+
+       Books       0.92      1.00      0.96       108
+    Clothing       0.94      0.90      0.92        91
+ Electronics       1.00      0.95      0.97       102
+  Home Decor       1.00      1.00      1.00        99
+
+    accuracy                           0.96       400
+   macro avg       0.97      0.96      0.96       400
+weighted avg       0.97      0.96      0.96       400
+
+
+=== Model: NaiveBayes ===
+Cross-validation scores: [0.295 0.265 0.315 0.34  0.305]
+Mean accuracy: 0.3040
+              precision    recall  f1-score   support
+
+       Books       0.36      0.29      0.32       108
+    Clothing       0.40      0.09      0.14        91
+ Electronics       0.26      0.22      0.24       102
+  Home Decor       0.34      0.73      0.47        99
+
+    accuracy                           0.33       400
+   macro avg       0.34      0.33      0.29       400
+weighted avg       0.34      0.33      0.29       400
+
+
+=== Model: SVM ===
+Cross-validation scores: [0.295 0.29  0.305 0.31  0.305]
+Mean accuracy: 0.3010
+              precision    recall  f1-score   support
+
+       Books       0.33      0.44      0.38       108
+    Clothing       0.30      0.20      0.24        91
+ Electronics       0.28      0.16      0.20       102
+  Home Decor       0.33      0.45      0.38        99
+
+    accuracy                           0.32       400
+   macro avg       0.31      0.31      0.30       400
+weighted avg       0.31      0.32      0.30       400
+

@@ -1,0 +1,23 @@
+--- Dotaz 1 ---
+-- 1. Počet transakcí za měsíc
+SELECT t.Year, t.Month, COUNT(*) AS TransactionCount
+FROM transaction_fact f
+JOIN time_dim t ON f.TimeID = t.TimeID
+GROUP BY t.Year, t.Month
+ORDER BY t.Year, t.Month
+
+=== Výstup ===
+Year Month  TransactionCount
+2023    12                 4
+2024    01               107
+2024    02                77
+2024    03                80
+2024    04                86
+2024    05                86
+2024    06                69
+2024    07                96
+2024    08                94
+2024    09                96
+2024    10                70
+2024    11                57
+2024    12                78

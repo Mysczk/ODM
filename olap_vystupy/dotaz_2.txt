@@ -1,0 +1,12 @@
+--- Dotaz 2 ---
+-- 2. Celkový obrat za jednotlivé roky
+SELECT t.Year, SUM(f.TotalValue) AS TotalRevenue
+FROM transaction_fact f
+JOIN time_dim t ON f.TimeID = t.TimeID
+GROUP BY t.Year
+ORDER BY t.Year
+
+=== Výstup ===
+Year  TotalRevenue
+2023       3769.52
+2024     686226.04
