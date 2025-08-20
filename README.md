@@ -2,6 +2,10 @@
 
 Tento projekt demonstruje využití nástroje **DuckDB** jako OLAP databáze v kombinaci s analytickým a dataminingovým zpracováním dat pomocí Pythonu. Datová sada vychází z e-commerce transakcí.
 
+## ERD
+![ERD](ERD.png)
+
+
 ## 📦 Struktura projektu
 
 ```
