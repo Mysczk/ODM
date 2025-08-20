@@ -32,7 +32,14 @@ for i, query in enumerate(queries, start=1):
 
         # === GRAF ===
         plt.figure()
-        title = f"Dotaz {i}"
+        with open(f"olap_vystupy/dotaz_{i}.txt", encoding="utf-8") as f:
+            lines = f.readlines()
+            title = lines[1]
+            if title.startswith("-- "):
+                title = title[3:]
+            title = title.strip()
+
+            
 
         # Pokud má 2 sloupce a 1 je textový, udělej bar plot
         if df.shape[1] == 2:
@@ -40,7 +47,7 @@ for i, query in enumerate(queries, start=1):
             if pd.api.types.is_string_dtype(df[x]) or pd.api.types.is_categorical_dtype(df[x]):
                 df.plot(kind="bar", x=x, y=y, legend=False)
                 plt.title(title)
-                plt.xlabel(x)
+                plt.xlabel("Year")
                 plt.ylabel(y)
                 plt.xticks(rotation=45, ha='right')
                 plt.tight_layout()
@@ -55,24 +62,26 @@ for i, query in enumerate(queries, start=1):
             y = df.columns.difference(["Year", "Month", "Date"])[0]
             df.plot(x="Date", y=y, kind="line", marker="o", legend=False)
             plt.title(title)
-            plt.xlabel("Datum")
+            plt.xlabel("Month")
             plt.ylabel(y)
             plt.tight_layout()
             plt.savefig(os.path.join(plot_dir, f"dotaz_{i}.png"))
             plt.close()
             continue
 
-        # Pokud má Year a Quarter
         if set(["Year", "Quarter"]).issubset(df.columns):
-            df["Label"] = df["Year"].astype(str) + " Q" + df["Quarter"].astype(str)
+            df["Label"] = df["Year"].astype(int).astype(str) + " Q" + df["Quarter"].astype(int).astype(str)
             y = df.columns.difference(["Year", "Quarter", "Label"])[0]
             df.plot(kind="bar", x="Label", y=y, legend=False)
             plt.title(title)
+            plt.xlabel("Quarter")
+            plt.ylabel(y)
             plt.xticks(rotation=45, ha='right')
             plt.tight_layout()
             plt.savefig(os.path.join(plot_dir, f"dotaz_{i}.png"))
             plt.close()
             continue
+
 
         # Jinak graf přeskoč
         print(f"[i] Dotaz {i}: není automaticky vizualizován.")
