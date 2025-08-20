@@ -15,8 +15,8 @@ weighted avg       0.29      0.28      0.26       400
 
 
 === Model: DecisionTree ===
-Cross-validation scores: [1.    1.    1.    0.995 1.   ]
-Mean accuracy: 0.9990
+Cross-validation scores: [0.995 1.    1.    0.995 1.   ]
+Mean accuracy: 0.9980
               precision    recall  f1-score   support
 
        Books       0.96      1.00      0.98       108
@@ -30,18 +30,18 @@ weighted avg       0.99      0.98      0.98       400
 
 
 === Model: RandomForest ===
-Cross-validation scores: [0.955 0.94  0.935 0.965 0.94 ]
-Mean accuracy: 0.9470
+Cross-validation scores: [0.945 0.925 0.925 0.99  0.965]
+Mean accuracy: 0.9500
               precision    recall  f1-score   support
 
-       Books       0.85      0.95      0.90       108
-    Clothing       0.93      0.81      0.87        91
- Electronics       0.92      0.88      0.90       102
-  Home Decor       0.87      0.89      0.88        99
+       Books       0.85      0.96      0.90       108
+    Clothing       0.94      0.81      0.87        91
+ Electronics       0.95      0.90      0.92       102
+  Home Decor       0.91      0.93      0.92        99
 
-    accuracy                           0.89       400
-   macro avg       0.89      0.88      0.89       400
-weighted avg       0.89      0.89      0.89       400
+    accuracy                           0.91       400
+   macro avg       0.91      0.90      0.90       400
+weighted avg       0.91      0.91      0.90       400
 
 
 === Model: GradientBoosting ===

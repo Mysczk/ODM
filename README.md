@@ -55,15 +55,12 @@ Tento projekt demonstruje využití nástroje **DuckDB** jako OLAP databáze v k
 1. Spusťte klasifikaci:
    ```bash
    python python/data_mining.py
+   python /python/regrese.py
    ```
 
 2. Výsledky:
    - Textový výstup: `output/classification_results.txt`
    - Vizualizace (confusion matrix): `vizualizace/`
-
-## 📊 ERD Diagram
-
-Soubor: `obrazky/er_diagram` (vložte do dokumentace např. jako PNG).
 
 ## 📑 Dokumentace
 
