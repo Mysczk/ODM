@@ -32,11 +32,11 @@ for i, rev in enumerate(predictions, start=1):
 
 # Vizualizace
 plt.figure(figsize=(10, 6))
-plt.plot(df['MonthIndex'], y, marker='o', label='Skutečné hodnoty')
-plt.plot(future_months['MonthIndex'], predictions, 'ro--', label='Předpověď (další 3 měsíce)')
-plt.xlabel('Index měsíce')
-plt.ylabel('Průměrné denní tržby (Kč)')
-plt.title('Lineární regrese: Předpověď průměrných denních tržeb')
+plt.plot(df['MonthIndex'], y, marker='o', label='Real values')
+plt.plot(future_months['MonthIndex'], predictions, 'ro--', label='Prediction (next 3 months)')
+plt.xlabel('Index of month')
+plt.ylabel('Average daily sales (Kč)')
+plt.title('Linear regression: Prediction of average daily sales')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
